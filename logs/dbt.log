@@ -1,0 +1,534 @@
+[0m14:04:54.588778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BCA516D040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BCA516DF10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BCA516C410>]}
+
+
+============================== 14:04:54.598053 | 07b85ab6-be09-4388-9f74-400c3b8f344e ==============================
+[0m14:04:54.598053 [info ] [MainThread]: Running with dbt=1.7.9
+[0m14:04:54.599067 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\ayush\\Downloads\\covid_dbt_mysql_project\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\ayush\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:04:54.600070 [info ] [MainThread]: dbt version: 1.7.9
+[0m14:04:54.601063 [info ] [MainThread]: python version: 3.12.0
+[0m14:04:54.602128 [info ] [MainThread]: python path: C:\Users\ayush\Downloads\covid_dbt_mysql_project\myvenv\Scripts\python.exe
+[0m14:04:54.603134 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m14:04:54.847632 [info ] [MainThread]: Using profiles dir at C:\Users\ayush\.dbt
+[0m14:04:54.849670 [info ] [MainThread]: Using profiles.yml file at C:\Users\ayush\.dbt\profiles.yml
+[0m14:04:54.849670 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\ayush\Downloads\covid_dbt_mysql_project\dbt_project.yml
+[0m14:04:54.852219 [info ] [MainThread]: adapter type: mysql
+[0m14:04:54.853277 [info ] [MainThread]: adapter version: 1.7.0
+[0m14:04:54.982287 [info ] [MainThread]: Configuration:
+[0m14:04:54.983673 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m14:04:54.986044 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m14:04:54.988505 [info ] [MainThread]: Required dependencies:
+[0m14:04:54.990804 [debug] [MainThread]: Executing "git --help"
+[0m14:04:55.067861 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:04:55.069241 [debug] [MainThread]: STDERR: "b''"
+[0m14:04:55.070263 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m14:04:55.072420 [info ] [MainThread]: Connection:
+[0m14:04:55.072420 [info ] [MainThread]:   server: 127.0.0.1
+[0m14:04:55.074886 [info ] [MainThread]:   unix_socket: None
+[0m14:04:55.074886 [info ] [MainThread]:   port: 3306
+[0m14:04:55.077197 [info ] [MainThread]:   database: None
+[0m14:04:55.078197 [info ] [MainThread]:   schema: covid_dbt
+[0m14:04:55.080202 [info ] [MainThread]:   user: root
+[0m14:04:55.081198 [info ] [MainThread]: Registered adapter: mysql=1.7.0
+[0m14:04:55.083197 [debug] [MainThread]: Acquiring new mysql connection 'debug'
+[0m14:04:55.084665 [debug] [MainThread]: Using mysql connection "debug"
+[0m14:04:55.084665 [debug] [MainThread]: On debug: select 1 as id
+[0m14:04:55.085670 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:04:55.113122 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m14:04:55.115427 [debug] [MainThread]: On debug: Close
+[0m14:04:55.116440 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m14:04:55.116440 [info ] [MainThread]: [32mAll checks passed![0m
+[0m14:04:55.118973 [debug] [MainThread]: Command `dbt debug` succeeded at 14:04:55.117556 after 0.69 seconds
+[0m14:04:55.118973 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m14:04:55.120251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BCA4B12A80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BCA4E03500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BCA4E028D0>]}
+[0m14:04:55.120251 [debug] [MainThread]: Flushing usage events
+[0m14:05:43.363734 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000172061D0170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000172064B8BF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000172064B8DD0>]}
+
+
+============================== 14:05:43.368899 | 0b7491fd-58fd-4f4a-95c1-0db603be2900 ==============================
+[0m14:05:43.368899 [info ] [MainThread]: Running with dbt=1.7.9
+[0m14:05:43.369664 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ayush\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\ayush\\Downloads\\covid_dbt_mysql_project\\logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt run', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:05:43.712953 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0b7491fd-58fd-4f4a-95c1-0db603be2900', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001720608D3A0>]}
+[0m14:05:43.809767 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0b7491fd-58fd-4f4a-95c1-0db603be2900', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001720649B0E0>]}
+[0m14:05:43.811830 [info ] [MainThread]: Registered adapter: mysql=1.7.0
+[0m14:05:43.845150 [debug] [MainThread]: checksum: 6ff0d83c3b46f350064523b4e08d9241403ad71d606ba49c4e670afba3668b39, vars: {}, profile: , target: , version: 1.7.9
+[0m14:05:43.847257 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m14:05:43.849272 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '0b7491fd-58fd-4f4a-95c1-0db603be2900', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017206B745F0>]}
+[0m14:05:46.505049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0b7491fd-58fd-4f4a-95c1-0db603be2900', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017206C4AB40>]}
+[0m14:05:46.537079 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0b7491fd-58fd-4f4a-95c1-0db603be2900', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017207E4E180>]}
+[0m14:05:46.538084 [info ] [MainThread]: Found 2 models, 0 sources, 0 exposures, 0 metrics, 375 macros, 0 groups, 0 semantic models
+[0m14:05:46.539081 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0b7491fd-58fd-4f4a-95c1-0db603be2900', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017207E6A1E0>]}
+[0m14:05:46.541469 [info ] [MainThread]: 
+[0m14:05:46.543494 [debug] [MainThread]: Acquiring new mysql connection 'master'
+[0m14:05:46.545773 [debug] [ThreadPool]: Acquiring new mysql connection 'list_schemas'
+[0m14:05:46.557082 [debug] [ThreadPool]: Using mysql connection "list_schemas"
+[0m14:05:46.557082 [debug] [ThreadPool]: On list_schemas: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "covid_dbt_mysql_project", "target_name": "dev", "connection_name": "list_schemas"} */
+select distinct schema_name
+        from information_schema.schemata
+[0m14:05:46.558083 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:05:46.579306 [debug] [ThreadPool]: SQL status: SUCCESS 10 in 0.0 seconds
+[0m14:05:46.581305 [debug] [ThreadPool]: On list_schemas: Close
+[0m14:05:46.583306 [debug] [ThreadPool]: Acquiring new mysql connection 'list_None_covid_dbt'
+[0m14:05:46.589306 [debug] [ThreadPool]: Using mysql connection "list_None_covid_dbt"
+[0m14:05:46.590309 [debug] [ThreadPool]: On list_None_covid_dbt: BEGIN
+[0m14:05:46.591710 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:05:46.599101 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.0 seconds
+[0m14:05:46.599101 [debug] [ThreadPool]: Using mysql connection "list_None_covid_dbt"
+[0m14:05:46.600185 [debug] [ThreadPool]: On list_None_covid_dbt: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "covid_dbt_mysql_project", "target_name": "dev", "connection_name": "list_None_covid_dbt"} */
+select
+      null as "database",
+      table_name as name,
+      table_schema as "schema",
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           else table_type
+      end as table_type
+    from information_schema.tables
+    where table_schema = 'covid_dbt'
+  
+[0m14:05:46.603304 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m14:05:46.605399 [debug] [ThreadPool]: On list_None_covid_dbt: ROLLBACK
+[0m14:05:46.606346 [debug] [ThreadPool]: On list_None_covid_dbt: Close
+[0m14:05:46.608307 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0b7491fd-58fd-4f4a-95c1-0db603be2900', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017207D58B60>]}
+[0m14:05:46.609307 [debug] [MainThread]: Using mysql connection "master"
+[0m14:05:46.609307 [debug] [MainThread]: On master: BEGIN
+[0m14:05:46.610306 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:05:46.615662 [debug] [MainThread]: SQL status: SUCCESS 0 in 0.0 seconds
+[0m14:05:46.617146 [debug] [MainThread]: On master: COMMIT
+[0m14:05:46.618213 [debug] [MainThread]: Using mysql connection "master"
+[0m14:05:46.618213 [debug] [MainThread]: On master: COMMIT
+[0m14:05:46.619658 [debug] [MainThread]: SQL status: SUCCESS 0 in 0.0 seconds
+[0m14:05:46.619658 [debug] [MainThread]: On master: Close
+[0m14:05:46.620974 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:05:46.621954 [info ] [MainThread]: 
+[0m14:05:46.649116 [debug] [Thread-1 (]: Began running node model.covid_dbt_mysql_project.stg_covid
+[0m14:05:46.652200 [info ] [Thread-1 (]: 1 of 2 START sql view model covid_dbt.stg_covid ................................ [RUN]
+[0m14:05:46.654620 [debug] [Thread-1 (]: Acquiring new mysql connection 'model.covid_dbt_mysql_project.stg_covid'
+[0m14:05:46.655634 [debug] [Thread-1 (]: Began compiling node model.covid_dbt_mysql_project.stg_covid
+[0m14:05:46.669826 [debug] [Thread-1 (]: Writing injected SQL for node "model.covid_dbt_mysql_project.stg_covid"
+[0m14:05:46.672866 [debug] [Thread-1 (]: Timing info for model.covid_dbt_mysql_project.stg_covid (compile): 14:05:46.656651 => 14:05:46.672866
+[0m14:05:46.673947 [debug] [Thread-1 (]: Began executing node model.covid_dbt_mysql_project.stg_covid
+[0m14:05:46.725439 [debug] [Thread-1 (]: Writing runtime sql for node "model.covid_dbt_mysql_project.stg_covid"
+[0m14:05:46.728521 [debug] [Thread-1 (]: Using mysql connection "model.covid_dbt_mysql_project.stg_covid"
+[0m14:05:46.729522 [debug] [Thread-1 (]: On model.covid_dbt_mysql_project.stg_covid: BEGIN
+[0m14:05:46.730991 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:05:46.737941 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.0 seconds
+[0m14:05:46.738943 [debug] [Thread-1 (]: Using mysql connection "model.covid_dbt_mysql_project.stg_covid"
+[0m14:05:46.738943 [debug] [Thread-1 (]: On model.covid_dbt_mysql_project.stg_covid: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "covid_dbt_mysql_project", "target_name": "dev", "node_id": "model.covid_dbt_mysql_project.stg_covid"} */
+
+  create view `covid_dbt`.`stg_covid__dbt_tmp`
+    
+    
+  as (
+    SELECT
+  country,
+  date,
+  confirmed_cases,
+  deaths
+FROM covid_raw
+  );
+[0m14:05:46.740889 [debug] [Thread-1 (]: mysql adapter: MySQL error: 1046 (3D000): No database selected
+[0m14:05:46.740889 [debug] [Thread-1 (]: On model.covid_dbt_mysql_project.stg_covid: ROLLBACK
+[0m14:05:46.743215 [debug] [Thread-1 (]: Timing info for model.covid_dbt_mysql_project.stg_covid (execute): 14:05:46.675248 => 14:05:46.741894
+[0m14:05:46.743215 [debug] [Thread-1 (]: On model.covid_dbt_mysql_project.stg_covid: Close
+[0m14:05:46.909212 [debug] [Thread-1 (]: Database Error in model stg_covid (models\stg_covid.sql)
+  1046 (3D000): No database selected
+  compiled Code at target\run\covid_dbt_mysql_project\models\stg_covid.sql
+[0m14:05:46.910307 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0b7491fd-58fd-4f4a-95c1-0db603be2900', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017207E62510>]}
+[0m14:05:46.911317 [error] [Thread-1 (]: 1 of 2 ERROR creating sql view model covid_dbt.stg_covid ....................... [[31mERROR[0m in 0.26s]
+[0m14:05:46.912505 [debug] [Thread-1 (]: Finished running node model.covid_dbt_mysql_project.stg_covid
+[0m14:05:46.914678 [debug] [Thread-1 (]: Began running node model.covid_dbt_mysql_project.summary_by_country
+[0m14:05:46.914678 [info ] [Thread-1 (]: 2 of 2 SKIP relation covid_dbt.summary_by_country .............................. [[33mSKIP[0m]
+[0m14:05:46.915782 [debug] [Thread-1 (]: Finished running node model.covid_dbt_mysql_project.summary_by_country
+[0m14:05:46.918339 [debug] [MainThread]: Using mysql connection "master"
+[0m14:05:46.918339 [debug] [MainThread]: On master: BEGIN
+[0m14:05:46.919383 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:05:46.925811 [debug] [MainThread]: SQL status: SUCCESS 0 in 0.0 seconds
+[0m14:05:46.925811 [debug] [MainThread]: On master: COMMIT
+[0m14:05:46.926895 [debug] [MainThread]: Using mysql connection "master"
+[0m14:05:46.926895 [debug] [MainThread]: On master: COMMIT
+[0m14:05:46.927891 [debug] [MainThread]: SQL status: SUCCESS 0 in 0.0 seconds
+[0m14:05:46.928895 [debug] [MainThread]: On master: Close
+[0m14:05:46.928895 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:05:46.930189 [debug] [MainThread]: Connection 'list_schemas' was properly closed.
+[0m14:05:46.930189 [debug] [MainThread]: Connection 'list_None_covid_dbt' was properly closed.
+[0m14:05:46.931203 [debug] [MainThread]: Connection 'model.covid_dbt_mysql_project.stg_covid' was properly closed.
+[0m14:05:46.934475 [info ] [MainThread]: 
+[0m14:05:46.935474 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 0.39 seconds (0.39s).
+[0m14:05:46.937481 [debug] [MainThread]: Command end result
+[0m14:05:46.948479 [info ] [MainThread]: 
+[0m14:05:46.949475 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m14:05:46.950477 [info ] [MainThread]: 
+[0m14:05:46.951475 [error] [MainThread]:   Database Error in model stg_covid (models\stg_covid.sql)
+  1046 (3D000): No database selected
+  compiled Code at target\run\covid_dbt_mysql_project\models\stg_covid.sql
+[0m14:05:46.952474 [info ] [MainThread]: 
+[0m14:05:46.953477 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=1 TOTAL=2
+[0m14:05:46.954507 [debug] [MainThread]: Command `dbt run` failed at 14:05:46.954507 after 3.76 seconds
+[0m14:05:46.954507 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000172061D0170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001720618AC30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017206188BC0>]}
+[0m14:05:46.955475 [debug] [MainThread]: Flushing usage events
+[0m14:13:25.980798 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000164E4C1A4E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000164E49690A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000164E4C1A1E0>]}
+
+
+============================== 14:13:25.988395 | f3a9959f-4bf2-4eb2-bc32-cf42d40902fe ==============================
+[0m14:13:25.988395 [info ] [MainThread]: Running with dbt=1.7.9
+[0m14:13:25.990558 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ayush\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\ayush\\Downloads\\covid_dbt_mysql_project\\logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m14:13:25.991880 [info ] [MainThread]: dbt version: 1.7.9
+[0m14:13:25.993141 [info ] [MainThread]: python version: 3.12.0
+[0m14:13:25.994438 [info ] [MainThread]: python path: C:\Users\ayush\Downloads\covid_dbt_mysql_project\myvenv\Scripts\python.exe
+[0m14:13:25.995549 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m14:13:26.134173 [info ] [MainThread]: Using profiles dir at C:\Users\ayush\.dbt
+[0m14:13:26.135174 [info ] [MainThread]: Using profiles.yml file at C:\Users\ayush\.dbt\profiles.yml
+[0m14:13:26.136173 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\ayush\Downloads\covid_dbt_mysql_project\dbt_project.yml
+[0m14:13:26.137212 [info ] [MainThread]: adapter type: mysql
+[0m14:13:26.138320 [info ] [MainThread]: adapter version: 1.7.0
+[0m14:13:26.231664 [info ] [MainThread]: Configuration:
+[0m14:13:26.232464 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m14:13:26.233479 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m14:13:26.234480 [info ] [MainThread]: Required dependencies:
+[0m14:13:26.234480 [debug] [MainThread]: Executing "git --help"
+[0m14:13:26.276619 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:13:26.277584 [debug] [MainThread]: STDERR: "b''"
+[0m14:13:26.278608 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m14:13:26.278608 [info ] [MainThread]: Connection:
+[0m14:13:26.279612 [info ] [MainThread]:   server: 127.0.0.1
+[0m14:13:26.280612 [info ] [MainThread]:   unix_socket: None
+[0m14:13:26.281613 [info ] [MainThread]:   port: 3306
+[0m14:13:26.282613 [info ] [MainThread]:   database: None
+[0m14:13:26.282613 [info ] [MainThread]:   schema: covid_dbt
+[0m14:13:26.283690 [info ] [MainThread]:   user: root
+[0m14:13:26.284610 [info ] [MainThread]: Registered adapter: mysql=1.7.0
+[0m14:13:26.285611 [debug] [MainThread]: Acquiring new mysql connection 'debug'
+[0m14:13:26.287024 [debug] [MainThread]: Using mysql connection "debug"
+[0m14:13:26.287024 [debug] [MainThread]: On debug: select 1 as id
+[0m14:13:26.288027 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:13:26.307028 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m14:13:26.309027 [debug] [MainThread]: On debug: Close
+[0m14:13:26.310029 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m14:13:26.310029 [info ] [MainThread]: [32mAll checks passed![0m
+[0m14:13:26.311031 [debug] [MainThread]: Command `dbt debug` succeeded at 14:13:26.311031 after 0.46 seconds
+[0m14:13:26.312610 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m14:13:26.313640 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000164E48C2480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000164E5226C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000164E5227F20>]}
+[0m14:13:26.313640 [debug] [MainThread]: Flushing usage events
+[0m14:13:43.299061 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AA32468260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AA32469880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AA32468E90>]}
+
+
+============================== 14:13:43.305329 | 09118590-54ed-4537-9838-a6380c4c3d6d ==============================
+[0m14:13:43.305329 [info ] [MainThread]: Running with dbt=1.7.9
+[0m14:13:43.307354 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ayush\\.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\ayush\\Downloads\\covid_dbt_mysql_project\\logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:13:43.531484 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '09118590-54ed-4537-9838-a6380c4c3d6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AA3248D940>]}
+[0m14:13:43.620263 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '09118590-54ed-4537-9838-a6380c4c3d6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AA3244AB40>]}
+[0m14:13:43.622254 [info ] [MainThread]: Registered adapter: mysql=1.7.0
+[0m14:13:43.638174 [debug] [MainThread]: checksum: 6ff0d83c3b46f350064523b4e08d9241403ad71d606ba49c4e670afba3668b39, vars: {}, profile: , target: , version: 1.7.9
+[0m14:13:43.770144 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:13:43.772152 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:13:43.785674 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '09118590-54ed-4537-9838-a6380c4c3d6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AA32468470>]}
+[0m14:13:43.805778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '09118590-54ed-4537-9838-a6380c4c3d6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AA33C69970>]}
+[0m14:13:43.806844 [info ] [MainThread]: Found 2 models, 0 sources, 0 exposures, 0 metrics, 375 macros, 0 groups, 0 semantic models
+[0m14:13:43.808788 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '09118590-54ed-4537-9838-a6380c4c3d6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AA325B9DF0>]}
+[0m14:13:43.813790 [info ] [MainThread]: 
+[0m14:13:43.815789 [debug] [MainThread]: Acquiring new mysql connection 'master'
+[0m14:13:43.819789 [debug] [ThreadPool]: Acquiring new mysql connection 'list_schemas'
+[0m14:13:43.837787 [debug] [ThreadPool]: Using mysql connection "list_schemas"
+[0m14:13:43.838787 [debug] [ThreadPool]: On list_schemas: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "covid_dbt_mysql_project", "target_name": "dev", "connection_name": "list_schemas"} */
+select distinct schema_name
+        from information_schema.schemata
+[0m14:13:43.839788 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:13:43.865695 [debug] [ThreadPool]: SQL status: SUCCESS 10 in 0.0 seconds
+[0m14:13:43.870011 [debug] [ThreadPool]: On list_schemas: Close
+[0m14:13:43.872432 [debug] [ThreadPool]: Acquiring new mysql connection 'list_None_covid_dbt'
+[0m14:13:43.881507 [debug] [ThreadPool]: Using mysql connection "list_None_covid_dbt"
+[0m14:13:43.881507 [debug] [ThreadPool]: On list_None_covid_dbt: BEGIN
+[0m14:13:43.882608 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:13:43.890180 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.0 seconds
+[0m14:13:43.891270 [debug] [ThreadPool]: Using mysql connection "list_None_covid_dbt"
+[0m14:13:43.892394 [debug] [ThreadPool]: On list_None_covid_dbt: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "covid_dbt_mysql_project", "target_name": "dev", "connection_name": "list_None_covid_dbt"} */
+select
+      null as "database",
+      table_name as name,
+      table_schema as "schema",
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           else table_type
+      end as table_type
+    from information_schema.tables
+    where table_schema = 'covid_dbt'
+  
+[0m14:13:43.894972 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m14:13:43.896982 [debug] [ThreadPool]: On list_None_covid_dbt: ROLLBACK
+[0m14:13:43.897989 [debug] [ThreadPool]: On list_None_covid_dbt: Close
+[0m14:13:43.899981 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '09118590-54ed-4537-9838-a6380c4c3d6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AA32AA3FE0>]}
+[0m14:13:43.901533 [debug] [MainThread]: Using mysql connection "master"
+[0m14:13:43.902641 [debug] [MainThread]: On master: BEGIN
+[0m14:13:43.902641 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:13:43.912036 [debug] [MainThread]: SQL status: SUCCESS 0 in 0.0 seconds
+[0m14:13:43.913040 [debug] [MainThread]: On master: COMMIT
+[0m14:13:43.914040 [debug] [MainThread]: Using mysql connection "master"
+[0m14:13:43.915040 [debug] [MainThread]: On master: COMMIT
+[0m14:13:43.915825 [debug] [MainThread]: SQL status: SUCCESS 0 in 0.0 seconds
+[0m14:13:43.916921 [debug] [MainThread]: On master: Close
+[0m14:13:43.918888 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:13:43.922839 [info ] [MainThread]: 
+[0m14:13:43.926839 [debug] [Thread-1 (]: Began running node model.covid_dbt_mysql_project.stg_covid
+[0m14:13:43.927841 [info ] [Thread-1 (]: 1 of 2 START sql view model covid_dbt.stg_covid ................................ [RUN]
+[0m14:13:43.929895 [debug] [Thread-1 (]: Acquiring new mysql connection 'model.covid_dbt_mysql_project.stg_covid'
+[0m14:13:43.931839 [debug] [Thread-1 (]: Began compiling node model.covid_dbt_mysql_project.stg_covid
+[0m14:13:43.939838 [debug] [Thread-1 (]: Writing injected SQL for node "model.covid_dbt_mysql_project.stg_covid"
+[0m14:13:43.941838 [debug] [Thread-1 (]: Timing info for model.covid_dbt_mysql_project.stg_covid (compile): 14:13:43.932843 => 14:13:43.940839
+[0m14:13:43.941838 [debug] [Thread-1 (]: Began executing node model.covid_dbt_mysql_project.stg_covid
+[0m14:13:43.992311 [debug] [Thread-1 (]: Writing runtime sql for node "model.covid_dbt_mysql_project.stg_covid"
+[0m14:13:43.994306 [debug] [Thread-1 (]: Using mysql connection "model.covid_dbt_mysql_project.stg_covid"
+[0m14:13:43.996307 [debug] [Thread-1 (]: On model.covid_dbt_mysql_project.stg_covid: BEGIN
+[0m14:13:43.997389 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:13:44.008308 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.0 seconds
+[0m14:13:44.009306 [debug] [Thread-1 (]: Using mysql connection "model.covid_dbt_mysql_project.stg_covid"
+[0m14:13:44.010305 [debug] [Thread-1 (]: On model.covid_dbt_mysql_project.stg_covid: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "covid_dbt_mysql_project", "target_name": "dev", "node_id": "model.covid_dbt_mysql_project.stg_covid"} */
+
+  create view `covid_dbt`.`stg_covid__dbt_tmp`
+    
+    
+  as (
+    SELECT
+  country,
+  date,
+  confirmed_cases,
+  deaths
+FROM covid_raw
+  );
+[0m14:13:44.011952 [debug] [Thread-1 (]: mysql adapter: MySQL error: 1046 (3D000): No database selected
+[0m14:13:44.012962 [debug] [Thread-1 (]: On model.covid_dbt_mysql_project.stg_covid: ROLLBACK
+[0m14:13:44.013957 [debug] [Thread-1 (]: Timing info for model.covid_dbt_mysql_project.stg_covid (execute): 14:13:43.942838 => 14:13:44.013957
+[0m14:13:44.014960 [debug] [Thread-1 (]: On model.covid_dbt_mysql_project.stg_covid: Close
+[0m14:13:44.024549 [debug] [Thread-1 (]: Database Error in model stg_covid (models\stg_covid.sql)
+  1046 (3D000): No database selected
+  compiled Code at target\run\covid_dbt_mysql_project\models\stg_covid.sql
+[0m14:13:44.025464 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '09118590-54ed-4537-9838-a6380c4c3d6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AA33AF9C40>]}
+[0m14:13:44.026550 [error] [Thread-1 (]: 1 of 2 ERROR creating sql view model covid_dbt.stg_covid ....................... [[31mERROR[0m in 0.10s]
+[0m14:13:44.028465 [debug] [Thread-1 (]: Finished running node model.covid_dbt_mysql_project.stg_covid
+[0m14:13:44.030464 [debug] [Thread-1 (]: Began running node model.covid_dbt_mysql_project.summary_by_country
+[0m14:13:44.032467 [info ] [Thread-1 (]: 2 of 2 SKIP relation covid_dbt.summary_by_country .............................. [[33mSKIP[0m]
+[0m14:13:44.033465 [debug] [Thread-1 (]: Finished running node model.covid_dbt_mysql_project.summary_by_country
+[0m14:13:44.035469 [debug] [MainThread]: Using mysql connection "master"
+[0m14:13:44.036545 [debug] [MainThread]: On master: BEGIN
+[0m14:13:44.037465 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:13:44.045509 [debug] [MainThread]: SQL status: SUCCESS 0 in 0.0 seconds
+[0m14:13:44.046513 [debug] [MainThread]: On master: COMMIT
+[0m14:13:44.047513 [debug] [MainThread]: Using mysql connection "master"
+[0m14:13:44.048513 [debug] [MainThread]: On master: COMMIT
+[0m14:13:44.049525 [debug] [MainThread]: SQL status: SUCCESS 0 in 0.0 seconds
+[0m14:13:44.050589 [debug] [MainThread]: On master: Close
+[0m14:13:44.052514 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:13:44.054515 [debug] [MainThread]: Connection 'list_schemas' was properly closed.
+[0m14:13:44.056513 [debug] [MainThread]: Connection 'list_None_covid_dbt' was properly closed.
+[0m14:13:44.057517 [debug] [MainThread]: Connection 'model.covid_dbt_mysql_project.stg_covid' was properly closed.
+[0m14:13:44.058516 [info ] [MainThread]: 
+[0m14:13:44.059550 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 0.24 seconds (0.24s).
+[0m14:13:44.061780 [debug] [MainThread]: Command end result
+[0m14:13:44.071878 [info ] [MainThread]: 
+[0m14:13:44.072837 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m14:13:44.073836 [info ] [MainThread]: 
+[0m14:13:44.075031 [error] [MainThread]:   Database Error in model stg_covid (models\stg_covid.sql)
+  1046 (3D000): No database selected
+  compiled Code at target\run\covid_dbt_mysql_project\models\stg_covid.sql
+[0m14:13:44.076034 [info ] [MainThread]: 
+[0m14:13:44.077036 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=1 TOTAL=2
+[0m14:13:44.078034 [debug] [MainThread]: Command `dbt run` failed at 14:13:44.078034 after 0.90 seconds
+[0m14:13:44.079036 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AA325F5DC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AA314E5730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AA33B48260>]}
+[0m14:13:44.080036 [debug] [MainThread]: Flushing usage events
+[0m14:19:34.841518 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020014B598E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020014B5BF20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020014B5BE00>]}
+
+
+============================== 14:19:34.847516 | de45d06a-f7e8-473b-be75-1a48c76d107e ==============================
+[0m14:19:34.847516 [info ] [MainThread]: Running with dbt=1.7.9
+[0m14:19:34.848517 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\ayush\\Downloads\\covid_dbt_mysql_project\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\ayush\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m14:19:34.851060 [info ] [MainThread]: dbt version: 1.7.9
+[0m14:19:34.852030 [info ] [MainThread]: python version: 3.12.0
+[0m14:19:34.853031 [info ] [MainThread]: python path: C:\Users\ayush\Downloads\covid_dbt_mysql_project\myvenv\Scripts\python.exe
+[0m14:19:34.854029 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m14:19:34.991149 [info ] [MainThread]: Using profiles dir at C:\Users\ayush\.dbt
+[0m14:19:34.992106 [info ] [MainThread]: Using profiles.yml file at C:\Users\ayush\.dbt\profiles.yml
+[0m14:19:34.993063 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\ayush\Downloads\covid_dbt_mysql_project\dbt_project.yml
+[0m14:19:34.994625 [info ] [MainThread]: adapter type: mysql
+[0m14:19:34.995140 [info ] [MainThread]: adapter version: 1.7.0
+[0m14:19:35.088216 [info ] [MainThread]: Configuration:
+[0m14:19:35.089216 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m14:19:35.090609 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m14:19:35.091631 [info ] [MainThread]: Required dependencies:
+[0m14:19:35.092078 [debug] [MainThread]: Executing "git --help"
+[0m14:19:35.136753 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:19:35.137753 [debug] [MainThread]: STDERR: "b''"
+[0m14:19:35.138754 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m14:19:35.139754 [info ] [MainThread]: Connection:
+[0m14:19:35.140753 [info ] [MainThread]:   server: 127.0.0.1
+[0m14:19:35.141377 [info ] [MainThread]:   unix_socket: None
+[0m14:19:35.142162 [info ] [MainThread]:   port: 3306
+[0m14:19:35.142785 [info ] [MainThread]:   database: None
+[0m14:19:35.143730 [info ] [MainThread]:   schema: covid_dbt
+[0m14:19:35.144798 [info ] [MainThread]:   user: root
+[0m14:19:35.145839 [info ] [MainThread]: Registered adapter: mysql=1.7.0
+[0m14:19:35.146810 [debug] [MainThread]: Acquiring new mysql connection 'debug'
+[0m14:19:35.147809 [debug] [MainThread]: Using mysql connection "debug"
+[0m14:19:35.148808 [debug] [MainThread]: On debug: select 1 as id
+[0m14:19:35.148808 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:19:35.164577 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m14:19:35.167955 [debug] [MainThread]: On debug: Close
+[0m14:19:35.168963 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m14:19:35.170031 [info ] [MainThread]: [32mAll checks passed![0m
+[0m14:19:35.171501 [debug] [MainThread]: Command `dbt debug` succeeded at 14:19:35.171501 after 0.47 seconds
+[0m14:19:35.171501 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m14:19:35.172583 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200147F76E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020014823200>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002001458ED80>]}
+[0m14:19:35.172583 [debug] [MainThread]: Flushing usage events
+[0m14:19:46.846237 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000284A7BC9EE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000284A7BC8B00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000284A7BC8320>]}
+
+
+============================== 14:19:46.852242 | 48b9fdd9-8d8a-4625-b2aa-f162295eb5dc ==============================
+[0m14:19:46.852242 [info ] [MainThread]: Running with dbt=1.7.9
+[0m14:19:46.853238 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ayush\\.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'C:\\Users\\ayush\\Downloads\\covid_dbt_mysql_project\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m14:19:47.094283 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '48b9fdd9-8d8a-4625-b2aa-f162295eb5dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000284A7BF26C0>]}
+[0m14:19:47.191702 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '48b9fdd9-8d8a-4625-b2aa-f162295eb5dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000284A7DB12B0>]}
+[0m14:19:47.193652 [info ] [MainThread]: Registered adapter: mysql=1.7.0
+[0m14:19:47.204710 [debug] [MainThread]: checksum: 6ff0d83c3b46f350064523b4e08d9241403ad71d606ba49c4e670afba3668b39, vars: {}, profile: , target: , version: 1.7.9
+[0m14:19:47.265813 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m14:19:47.266776 [debug] [MainThread]: Partial parsing: updated file: covid_dbt_mysql_project://models\summary_by_country.sql
+[0m14:19:47.267810 [debug] [MainThread]: Partial parsing: updated file: covid_dbt_mysql_project://models\stg_covid.sql
+[0m14:19:47.428483 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '48b9fdd9-8d8a-4625-b2aa-f162295eb5dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000284A94EE180>]}
+[0m14:19:47.439484 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '48b9fdd9-8d8a-4625-b2aa-f162295eb5dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000284A9390CB0>]}
+[0m14:19:47.440485 [info ] [MainThread]: Found 2 models, 0 sources, 0 exposures, 0 metrics, 375 macros, 0 groups, 0 semantic models
+[0m14:19:47.442486 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '48b9fdd9-8d8a-4625-b2aa-f162295eb5dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000284A7BCA2A0>]}
+[0m14:19:47.445872 [info ] [MainThread]: 
+[0m14:19:47.448310 [debug] [MainThread]: Acquiring new mysql connection 'master'
+[0m14:19:47.452765 [debug] [ThreadPool]: Acquiring new mysql connection 'list_schemas'
+[0m14:19:47.487436 [debug] [ThreadPool]: Using mysql connection "list_schemas"
+[0m14:19:47.487436 [debug] [ThreadPool]: On list_schemas: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "covid_dbt_mysql_project", "target_name": "dev", "connection_name": "list_schemas"} */
+select distinct schema_name
+        from information_schema.schemata
+[0m14:19:47.488548 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:19:47.506905 [debug] [ThreadPool]: SQL status: SUCCESS 10 in 0.0 seconds
+[0m14:19:47.507918 [debug] [ThreadPool]: On list_schemas: Close
+[0m14:19:47.512154 [debug] [ThreadPool]: Acquiring new mysql connection 'list_None_covid_dbt'
+[0m14:19:47.518866 [debug] [ThreadPool]: Using mysql connection "list_None_covid_dbt"
+[0m14:19:47.519866 [debug] [ThreadPool]: On list_None_covid_dbt: BEGIN
+[0m14:19:47.520866 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:19:47.529981 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.0 seconds
+[0m14:19:47.531024 [debug] [ThreadPool]: Using mysql connection "list_None_covid_dbt"
+[0m14:19:47.532032 [debug] [ThreadPool]: On list_None_covid_dbt: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "covid_dbt_mysql_project", "target_name": "dev", "connection_name": "list_None_covid_dbt"} */
+select
+      null as "database",
+      table_name as name,
+      table_schema as "schema",
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           else table_type
+      end as table_type
+    from information_schema.tables
+    where table_schema = 'covid_dbt'
+  
+[0m14:19:47.535508 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m14:19:47.538511 [debug] [ThreadPool]: On list_None_covid_dbt: ROLLBACK
+[0m14:19:47.539511 [debug] [ThreadPool]: On list_None_covid_dbt: Close
+[0m14:19:47.541511 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '48b9fdd9-8d8a-4625-b2aa-f162295eb5dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000284A9269B50>]}
+[0m14:19:47.541511 [debug] [MainThread]: Using mysql connection "master"
+[0m14:19:47.543853 [debug] [MainThread]: On master: BEGIN
+[0m14:19:47.544851 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:19:47.552183 [debug] [MainThread]: SQL status: SUCCESS 0 in 0.0 seconds
+[0m14:19:47.553289 [debug] [MainThread]: On master: COMMIT
+[0m14:19:47.553289 [debug] [MainThread]: Using mysql connection "master"
+[0m14:19:47.553289 [debug] [MainThread]: On master: COMMIT
+[0m14:19:47.554564 [debug] [MainThread]: SQL status: SUCCESS 0 in 0.0 seconds
+[0m14:19:47.555571 [debug] [MainThread]: On master: Close
+[0m14:19:47.556576 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:19:47.556576 [info ] [MainThread]: 
+[0m14:19:47.562229 [debug] [Thread-1 (]: Began running node model.covid_dbt_mysql_project.stg_covid
+[0m14:19:47.562229 [info ] [Thread-1 (]: 1 of 2 START sql view model covid_dbt.stg_covid ................................ [RUN]
+[0m14:19:47.564273 [debug] [Thread-1 (]: Acquiring new mysql connection 'model.covid_dbt_mysql_project.stg_covid'
+[0m14:19:47.564273 [debug] [Thread-1 (]: Began compiling node model.covid_dbt_mysql_project.stg_covid
+[0m14:19:47.571595 [debug] [Thread-1 (]: Writing injected SQL for node "model.covid_dbt_mysql_project.stg_covid"
+[0m14:19:47.572615 [debug] [Thread-1 (]: Timing info for model.covid_dbt_mysql_project.stg_covid (compile): 14:19:47.565419 => 14:19:47.572615
+[0m14:19:47.573628 [debug] [Thread-1 (]: Began executing node model.covid_dbt_mysql_project.stg_covid
+[0m14:19:47.616699 [debug] [Thread-1 (]: Writing runtime sql for node "model.covid_dbt_mysql_project.stg_covid"
+[0m14:19:47.617699 [debug] [Thread-1 (]: Using mysql connection "model.covid_dbt_mysql_project.stg_covid"
+[0m14:19:47.618699 [debug] [Thread-1 (]: On model.covid_dbt_mysql_project.stg_covid: BEGIN
+[0m14:19:47.619699 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:19:47.624481 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.0 seconds
+[0m14:19:47.625629 [debug] [Thread-1 (]: Using mysql connection "model.covid_dbt_mysql_project.stg_covid"
+[0m14:19:47.626628 [debug] [Thread-1 (]: On model.covid_dbt_mysql_project.stg_covid: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "covid_dbt_mysql_project", "target_name": "dev", "node_id": "model.covid_dbt_mysql_project.stg_covid"} */
+
+  create view `covid_dbt`.`stg_covid__dbt_tmp`
+    
+    
+  as (
+    use covid_dbt
+
+SELECT
+  country,
+  date,
+  confirmed_cases,
+  deaths
+FROM covid_raw
+  );
+[0m14:19:47.630064 [debug] [Thread-1 (]: mysql adapter: MySQL error: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'use covid_dbt
+
+SELECT
+  country,
+  date,
+  confirmed_cases,
+  deaths
+FROM covid_' at line 7
+[0m14:19:47.630064 [debug] [Thread-1 (]: On model.covid_dbt_mysql_project.stg_covid: ROLLBACK
+[0m14:19:47.632152 [debug] [Thread-1 (]: Timing info for model.covid_dbt_mysql_project.stg_covid (execute): 14:19:47.574628 => 14:19:47.631082
+[0m14:19:47.632152 [debug] [Thread-1 (]: On model.covid_dbt_mysql_project.stg_covid: Close
+[0m14:19:47.639394 [debug] [Thread-1 (]: Database Error in model stg_covid (models\stg_covid.sql)
+  1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'use covid_dbt
+  
+  SELECT
+    country,
+    date,
+    confirmed_cases,
+    deaths
+  FROM covid_' at line 7
+  compiled Code at target\run\covid_dbt_mysql_project\models\stg_covid.sql
+[0m14:19:47.639394 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '48b9fdd9-8d8a-4625-b2aa-f162295eb5dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000284A94BA390>]}
+[0m14:19:47.640417 [error] [Thread-1 (]: 1 of 2 ERROR creating sql view model covid_dbt.stg_covid ....................... [[31mERROR[0m in 0.08s]
+[0m14:19:47.642468 [debug] [Thread-1 (]: Finished running node model.covid_dbt_mysql_project.stg_covid
+[0m14:19:47.645884 [debug] [Thread-1 (]: Began running node model.covid_dbt_mysql_project.summary_by_country
+[0m14:19:47.645884 [info ] [Thread-1 (]: 2 of 2 SKIP relation covid_dbt.summary_by_country .............................. [[33mSKIP[0m]
+[0m14:19:47.647083 [debug] [Thread-1 (]: Finished running node model.covid_dbt_mysql_project.summary_by_country
+[0m14:19:47.649165 [debug] [MainThread]: Using mysql connection "master"
+[0m14:19:47.650177 [debug] [MainThread]: On master: BEGIN
+[0m14:19:47.650177 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:19:47.657273 [debug] [MainThread]: SQL status: SUCCESS 0 in 0.0 seconds
+[0m14:19:47.657273 [debug] [MainThread]: On master: COMMIT
+[0m14:19:47.658290 [debug] [MainThread]: Using mysql connection "master"
+[0m14:19:47.659278 [debug] [MainThread]: On master: COMMIT
+[0m14:19:47.661478 [debug] [MainThread]: SQL status: SUCCESS 0 in 0.0 seconds
+[0m14:19:47.662482 [debug] [MainThread]: On master: Close
+[0m14:19:47.663633 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:19:47.663633 [debug] [MainThread]: Connection 'list_schemas' was properly closed.
+[0m14:19:47.664653 [debug] [MainThread]: Connection 'list_None_covid_dbt' was properly closed.
+[0m14:19:47.664653 [debug] [MainThread]: Connection 'model.covid_dbt_mysql_project.stg_covid' was properly closed.
+[0m14:19:47.664653 [info ] [MainThread]: 
+[0m14:19:47.665671 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 0.22 seconds (0.22s).
+[0m14:19:47.666688 [debug] [MainThread]: Command end result
+[0m14:19:47.675225 [info ] [MainThread]: 
+[0m14:19:47.677497 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m14:19:47.678497 [info ] [MainThread]: 
+[0m14:19:47.679497 [error] [MainThread]:   Database Error in model stg_covid (models\stg_covid.sql)
+  1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'use covid_dbt
+  
+  SELECT
+    country,
+    date,
+    confirmed_cases,
+    deaths
+  FROM covid_' at line 7
+  compiled Code at target\run\covid_dbt_mysql_project\models\stg_covid.sql
+[0m14:19:47.680693 [info ] [MainThread]: 
+[0m14:19:47.682007 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=1 TOTAL=2
+[0m14:19:47.683330 [debug] [MainThread]: Command `dbt run` failed at 14:19:47.683330 after 0.96 seconds
+[0m14:19:47.684353 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000284A791DD00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000284A94EC230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000284A823CCE0>]}
+[0m14:19:47.685352 [debug] [MainThread]: Flushing usage events

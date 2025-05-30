@@ -1,0 +1,1 @@
+{"_invocation_id": "48b9fdd9-8d8a-4625-b2aa-f162295eb5dc", "linked": {"0": {"name": "model.covid_dbt_mysql_project.summary_by_country", "type": "model"}, "1": {"name": "model.covid_dbt_mysql_project.stg_covid", "type": "model", "succ": [0]}}}

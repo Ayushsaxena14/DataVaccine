@@ -1,0 +1,9 @@
+name: covid_dbt_mysql_project
+version: '1.0'
+profile: covid_dbt_mysql_project
+
+model-paths: ["models"]
+
+models:
+  covid_dbt_mysql_project:
+    materialized: view
